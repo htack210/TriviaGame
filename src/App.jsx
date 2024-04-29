@@ -4,14 +4,16 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import nflTriviaData from "../components/NflTrivia";
 import { FullCard } from "../components/FullCard.jsx";
+import { RandomNumbers } from "../components/RandomNumbers.jsx";
 const categories = ["All", "Teams", "Players & Coaches"];
 const questions = nflTriviaData;
+const numbers = RandomNumbers;
 
 function App() {
   const [flipped, setFlipped] = useState(false); //Not flipped at first
   const [filteredBtns, setFilteredBtns] = useState(questions);
   const [questionIdx, setQuestionIdx] = useState(0);
-
+  const numbers = RandomNumbers();
   const handleClick = (category) => {
     console.log(category);
     if (category === "All") {
@@ -23,15 +25,16 @@ function App() {
       setFilteredBtns(filteredQuestions); // These are questions filtered by a single category.
     }
   };
-
+  console.log("numbers: " + numbers);
   function handleFlipped() {
     setFlipped(!flipped);
     console.log(flipped);
   }
-
   function nextIndex() {
     if (questionIdx < filteredBtns.length - 1) {
       setQuestionIdx(questionIdx + 1);
+      // if (questionIdx < filteredBtns.length - 1) {
+      //   setQuestionIdx(numbers(questionIdx + 1));
     } else {
       setQuestionIdx(0);
       // This should kick off final score calculation.
@@ -61,7 +64,6 @@ function App() {
 
       <div className="content">
         <div className="cards-container">
-          {console.log(filteredBtns[questionIdx])}
           <FullCard //Child to app.jsx
             questionObject={filteredBtns[questionIdx]} //Sends filteredBtns object to child.
             handleNextQuestion={nextIndex} // Increments index number to move app to next question.
