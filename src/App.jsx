@@ -5,6 +5,7 @@ import "./App.css";
 import nflTriviaData from "../components/NflTrivia";
 import { FullCard } from "../components/FullCard.jsx";
 // import RandomNumbers from "../components/RandomNumbers.jsx";
+import ShuffleArray from "../components/ShuffleArray.jsx";
 const categories = ["All", "Teams", "Players & Coaches"];
 const questions = nflTriviaData;
 
@@ -16,11 +17,13 @@ function App() {
     console.log(category);
     if (category === "All") {
       setFilteredBtns(questions); // These are questions from ALL categories.
+      <ShuffleArray length={filteredBtns.length} />;
     } else {
       const filteredQuestions = questions.filter(
         (btn) => btn.category === category
       );
       setFilteredBtns(filteredQuestions); // These are questions filtered by a single category.
+      <ShuffleArray length={filteredBtns.length} />;
     }
   };
 

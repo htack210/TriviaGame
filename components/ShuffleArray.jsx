@@ -1,5 +1,3 @@
-// ShuffleArray.jsx
-
 import React from "react";
 
 function shuffleArray(length) {
