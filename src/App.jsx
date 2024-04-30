@@ -4,7 +4,6 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import nflTriviaData from "../components/NflTrivia";
 import { FullCard } from "../components/FullCard.jsx";
-import RandomNumbers from "../components/RandomNumbers.jsx";
 const categories = ["All", "Teams", "Players & Coaches"];
 const questions = nflTriviaData;
 
@@ -12,7 +11,6 @@ function App() {
   const [flipped, setFlipped] = useState(false); //Not flipped at first
   const [filteredBtns, setFilteredBtns] = useState(questions);
   const [questionIdx, setQuestionIdx] = useState(0);
-  const [numbers, setNumbers] = useState([]);
   const handleClick = (category) => {
     console.log(category);
     if (category === "All") {
@@ -24,7 +22,7 @@ function App() {
       setFilteredBtns(filteredQuestions); // These are questions filtered by a single category.
     }
   };
-  console.log("numbers: " + numbers);
+
   function handleFlipped() {
     setFlipped(!flipped);
     console.log(flipped);
