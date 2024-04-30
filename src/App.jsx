@@ -4,16 +4,15 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import nflTriviaData from "../components/NflTrivia";
 import { FullCard } from "../components/FullCard.jsx";
-import { RandomNumbers } from "../components/RandomNumbers.jsx";
+import RandomNumbers from "../components/RandomNumbers.jsx";
 const categories = ["All", "Teams", "Players & Coaches"];
 const questions = nflTriviaData;
-const numbers = RandomNumbers;
 
 function App() {
   const [flipped, setFlipped] = useState(false); //Not flipped at first
   const [filteredBtns, setFilteredBtns] = useState(questions);
   const [questionIdx, setQuestionIdx] = useState(0);
-  const numbers = RandomNumbers();
+  const [numbers, setNumbers] = useState([]);
   const handleClick = (category) => {
     console.log(category);
     if (category === "All") {
@@ -31,7 +30,8 @@ function App() {
     console.log(flipped);
   }
   function nextIndex() {
-    if (questionIdx < filteredBtns.length - 1) {
+    // if (questionIdx < filteredBtns.length - 1) {
+    if (questionIdx < 20) {
       setQuestionIdx(questionIdx + 1);
       // if (questionIdx < filteredBtns.length - 1) {
       //   setQuestionIdx(numbers(questionIdx + 1));
