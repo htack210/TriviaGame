@@ -4,6 +4,7 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import nflTriviaData from "../components/NflTrivia";
 import { FullCard } from "../components/FullCard.jsx";
+import RandomNumbers from "../components/RandomNumbers.jsx";
 const categories = ["All", "Teams", "Players & Coaches"];
 const questions = nflTriviaData;
 
@@ -27,18 +28,25 @@ function App() {
     setFlipped(!flipped);
     console.log(flipped);
   }
-  function nextIndex() {
-    // if (questionIdx < filteredBtns.length - 1) {
-    if (questionIdx < 20) {
-      // Hard-wired to 20 on purpose.
-      setQuestionIdx(questionIdx + 1);
-    } else {
-      setQuestionIdx(0);
-      // This should kick off final score calculation.
-    }
 
+  // Using RandomNumbers component to get a random index
+  const nextIndex = () => {
+    const randomIndex = RandomNumbers({ arraySize: filteredBtns.length });
+    setQuestionIdx(randomIndex());
     setFlipped(false);
-  }
+  };
+  // function nextIndex() {
+  //   // if (questionIdx < filteredBtns.length - 1) {
+  //   if (questionIdx < 20) {
+  //     // Hard-wired to 20 on purpose.
+  //     setQuestionIdx(questionIdx + 1);
+  //   } else {
+  //     setQuestionIdx(0);
+  //     // This should kick off final score calculation.
+  //   }
+
+  //   setFlipped(false);
+  // }
   return (
     <>
       <div className="main-nav">

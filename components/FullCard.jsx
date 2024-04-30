@@ -18,6 +18,8 @@ export function FullCard({
                 <b>{questionObject.category}</b>
                 <br />
                 {questionObject.question}
+                <br />
+                Question ID: {questionObject.id}
               </p>
             </div>
           </div>
