@@ -1,6 +1,4 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { useState, useEffect } from "react";
 import "./App.css";
 import nflTriviaData from "../components/NflTrivia";
 import { FullCard } from "../components/FullCard.jsx";
@@ -13,19 +11,28 @@ function App() {
   const [flipped, setFlipped] = useState(false); //Not flipped at first
   const [filteredBtns, setFilteredBtns] = useState(questions);
   const [questionIdx, setQuestionIdx] = useState(0);
+  const [shuffledArray, setShuffledArray] = useState([]);
+
   const handleClick = (category) => {
     console.log(category);
     if (category === "All") {
       setFilteredBtns(questions); // These are questions from ALL categories.
-      <ShuffleArray length={filteredBtns.length} />;
     } else {
       const filteredQuestions = questions.filter(
         (btn) => btn.category === category
       );
       setFilteredBtns(filteredQuestions); // These are questions filtered by a single category.
-      <ShuffleArray length={filteredBtns.length} />;
     }
   };
+
+  useEffect(() => {
+    if (filteredBtns.length > 0) {
+      const newArray = ShuffleArray(filteredBtns.length);
+      setShuffledArray(newArray);
+      console.log("FilteredBtns len = " + filteredBtns.length);
+      console.log(newArray);
+    }
+  }, [filteredBtns]);
 
   function handleFlipped() {
     setFlipped(!flipped);
