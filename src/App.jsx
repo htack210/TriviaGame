@@ -30,9 +30,8 @@ function App() {
   function nextIndex() {
     // if (questionIdx < filteredBtns.length - 1) {
     if (questionIdx < 20) {
+      // Hard-wired to 20 on purpose.
       setQuestionIdx(questionIdx + 1);
-      // if (questionIdx < filteredBtns.length - 1) {
-      //   setQuestionIdx(numbers(questionIdx + 1));
     } else {
       setQuestionIdx(0);
       // This should kick off final score calculation.
