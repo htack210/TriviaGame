@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import nflTriviaData from "../components/NflTrivia";
+import ShuffleArray from "../components/ShuffleArray.jsx";
 import { FullCard } from "../components/FullCard.jsx";
 const categories = ["All", "Teams", "Players & Coaches"];
 const questions = nflTriviaData;
@@ -9,7 +10,9 @@ function App() {
   const [flipped, setFlipped] = useState(false); //Not flipped at first
   const [filteredBtns, setFilteredBtns] = useState(questions);
   const [questionIdx, setQuestionIdx] = useState(0);
-  const [shuffledArray, setShuffledArray] = useState([]);
+  
+   // Generate shuffled array
+   const shuffledArray = ShuffleArray({ length: filteredBtns.length });
 
   const handleClick = (category) => {
     console.log(category);
@@ -30,7 +33,7 @@ function App() {
 
   function nextIndex() {
     // if (questionIdx < filteredBtns.length - 1) {
-    
+    console.log(shuffledArray)
     if (questionIdx < 20) {
       // Hard-wired to 20 on purpose.
       setQuestionIdx(questionIdx + 1);
