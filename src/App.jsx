@@ -2,8 +2,6 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import nflTriviaData from "../components/NflTrivia";
 import { FullCard } from "../components/FullCard.jsx";
-// import RandomNumbers from "../components/RandomNumbers.jsx";
-import ShuffleArray from "../components/ShuffleArray.jsx";
 const categories = ["All", "Teams", "Players & Coaches"];
 const questions = nflTriviaData;
 
@@ -25,27 +23,14 @@ function App() {
     }
   };
 
-  useEffect(() => {
-    if (filteredBtns.length > 0) {
-      const newArray = ShuffleArray(filteredBtns.length);
-      setShuffledArray(newArray);
-      console.log("FilteredBtns len = " + filteredBtns.length);
-    }
-  }, [filteredBtns]);
-
   function handleFlipped() {
     setFlipped(!flipped);
     console.log(flipped);
   }
 
-  // Using RandomNumbers component to get a random index
-  // const nextIndex = () => {
-  //   const randomIndex = RandomNumbers({ arraySize: filteredBtns.length });
-  //   setQuestionIdx(randomIndex());
-  //   setFlipped(false);
-  // };
   function nextIndex() {
     // if (questionIdx < filteredBtns.length - 1) {
+    
     if (questionIdx < 20) {
       // Hard-wired to 20 on purpose.
       setQuestionIdx(questionIdx + 1);
