@@ -6,14 +6,12 @@ export function FullCard({
   flippedState,
 }) {
   return (
-    // <div onClick={() => handleFlipped()}>
     <div>
       {/* Card Front */}
       {!flippedState && (
         <>
           <div className="card">
             <div className="top">
-              {/* <img src="../public/vite.svg" /> */}
               <p>
                 <b>{questionObject.category}</b>
                 <br />

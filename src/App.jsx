@@ -16,6 +16,7 @@ function App() {
 
   const handleClick = (category) => {
     console.log(category);
+    console.log(shuffledArray)
     if (category === "All") {
       setFilteredBtns(questions); // These are questions from ALL categories.
     } else {
@@ -33,12 +34,11 @@ function App() {
 
   function nextIndex() {
     // if (questionIdx < filteredBtns.length - 1) {
-    console.log(shuffledArray)
     if (questionIdx < 20) {
       // Hard-wired to 20 on purpose.
-      setQuestionIdx(questionIdx + 1);
+      setQuestionIdx(shuffledArray[questionIdx + 1]);
     } else {
-      setQuestionIdx(0);
+      setQuestionIdx(shuffledArray[0]);
       // This should kick off final score calculation.
     }
 
