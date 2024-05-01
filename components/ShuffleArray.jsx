@@ -13,10 +13,7 @@ export function shuffleArray(length) {
 }
 
 function ShuffleArray({ length }) {
-  const shuffledArray = shuffleArray(length);
-
-  // Return the shuffled array or do something else with it
-  return <>{shuffledArray}</>;
+  return shuffleArray(length);
 }
 
 export default ShuffleArray;
