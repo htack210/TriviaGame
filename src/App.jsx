@@ -30,7 +30,6 @@ function App() {
       const newArray = ShuffleArray(filteredBtns.length);
       setShuffledArray(newArray);
       console.log("FilteredBtns len = " + filteredBtns.length);
-      console.log(newArray);
     }
   }, [filteredBtns]);
 
