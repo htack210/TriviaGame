@@ -10,26 +10,35 @@ function App() {
   const [flipped, setFlipped] = useState(false); //Not flipped at first
   const [filteredBtns, setFilteredBtns] = useState(questions);
   const [questionIdx, setQuestionIdx] = useState(0);
-  
-   // Generate shuffled array
-   const shuffledArray = ShuffleArray({ length: filteredBtns.length });
+  const [shuffledArray, setShuffledArray] = useState([]);
 
-  const handleClick = (category) => {
-    console.log(category);
-    console.log(shuffledArray)
+  useEffect(() => {
+    // Initialize with default category "All" when component mounts
+    handleClick("All");
+  }, []);
+  
+  //  // Generate shuffled array
+  //  const shuffledArray = ShuffleArray({ length: filteredBtns.length });
+   console.log(shuffledArray)
+
+   const handleClick = (category) => {
+    let newFilteredBtns = [];
     if (category === "All") {
-      setFilteredBtns(questions); // These are questions from ALL categories.
+      newFilteredBtns = questions;
     } else {
-      const filteredQuestions = questions.filter(
-        (btn) => btn.category === category
-      );
-      setFilteredBtns(filteredQuestions); // These are questions filtered by a single category.
+      newFilteredBtns = questions.filter((btn) => btn.category === category);
     }
+    setFilteredBtns(newFilteredBtns);
+    setQuestionIdx(0); // Reset question index when category changes
+    setFlipped(false); // Reset flipped state when category changes
+
+    // Shuffle the array only when the category changes
+    setShuffledArray(ShuffleArray({ length: newFilteredBtns.length }));
   };
 
   function handleFlipped() {
     setFlipped(!flipped);
-    console.log(flipped);
+    // console.log(flipped);
   }
 
   function nextIndex() {
