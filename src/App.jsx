@@ -86,6 +86,7 @@ function App() {
             handleFlipped={handleFlipped} // Card flip function.
             flippedState={flipped} // Shows card flipped state.
           />
+          
         </div>
       </div>
     </>
