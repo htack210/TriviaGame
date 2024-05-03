@@ -40,7 +40,7 @@ export function FullCard({
         <button className="responseBtn">B. {questionObject.B}</button>
         <button className="responseBtn">C. {questionObject.C}</button>
       </div>
-      {flippedState === true ? (console.log('Yo, I am flipped!')) : (console.log("I am not flipped"))}
+      {/* {flippedState === true ? (document.getElementById("responseBtn").disabled = true) : (document.getElementById("responseBtn").disabled = false)} */}
     </div>
   );
 }
