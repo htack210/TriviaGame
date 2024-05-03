@@ -16,10 +16,10 @@ function App() {
     // Initialize with default category "All" when component mounts
     handleClick("All");
   }, []);
-  
+
   // console.log(shuffledArray) // Uncomment for debugging
 
-   const handleClick = (category) => {
+  const handleClick = (category) => {
     let newFilteredBtns = [];
     if (category === "All") {
       newFilteredBtns = questions;
@@ -28,7 +28,7 @@ function App() {
     }
     setFilteredBtns(newFilteredBtns);
     setQuestionIdx(0); // Reset question index when category changes
-    console.log("I just reset to 0!")
+    console.log("I just reset to 0!");
     setFlipped(false); // Reset flipped state when category changes
 
     // Shuffle the array only when the category changes
@@ -55,7 +55,8 @@ function App() {
     setFlipped(false);
   }
 
-  const currentQuestion = shuffledArray.length > 0 ? filteredBtns[shuffledArray[questionIdx]] : null;
+  const currentQuestion =
+    shuffledArray.length > 0 ? filteredBtns[shuffledArray[questionIdx]] : null;
 
   return (
     <>
