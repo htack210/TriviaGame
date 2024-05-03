@@ -39,8 +39,11 @@ export function FullCard({
         <button className="responseBtn">A. {questionObject.A}</button>
         <button className="responseBtn">B. {questionObject.B}</button>
         <button className="responseBtn">C. {questionObject.C}</button>
+        {flippedState === true ? (console.log('Flipped')) : (console.log('Not flipped'))}
+        {flippedState === true ? (document.getElementsByClassName('responseBtn').disabled = true) : (document.getElementsByClassName('responseBtn').disabled = false)}
       </div>
-      {/* {flippedState === true ? (document.getElementById("responseBtn").disabled = true) : (document.getElementById("responseBtn").disabled = false)} */}
+    
+      {/* {flippedState === true ? (console.log('Flipped')) : (console.log('Not flipped'))} */}
     </div>
   );
 }
