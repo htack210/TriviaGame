@@ -56,7 +56,7 @@ function App() {
   }
 
   const currentQuestion = shuffledArray.length > 0 ? filteredBtns[shuffledArray[questionIdx]] : null;
-  
+
   return (
     <>
       <div className="main-nav">
@@ -80,9 +80,9 @@ function App() {
       <div className="content">
         <div className="cards-container">
           <FullCard //Child to app.jsx
-            questionObject={filteredBtns[questionIdx]} //Sends filteredBtns object to child.
-            // handleNextQuestion={nextIndex} // Increments index number to move app to next question.
-            handleNextQuestion={currentQuestion} 
+            // questionObject={filteredBtns[questionIdx]} //Sends filteredBtns object to child.
+            questionObject={currentQuestion || filteredBtns[questionIdx]} //Sends filteredBtns object to child.
+            handleNextQuestion={nextIndex} // Increments index number to move app to next question.
             handleFlipped={handleFlipped} // Card flip function.
             flippedState={flipped} // Shows card flipped state.
           />
