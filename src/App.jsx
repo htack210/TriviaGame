@@ -28,6 +28,7 @@ function App() {
     }
     setFilteredBtns(newFilteredBtns);
     setQuestionIdx(0); // Reset question index when category changes
+    console.log("I just reset to 0!")
     setFlipped(false); // Reset flipped state when category changes
 
     // Shuffle the array only when the category changes
@@ -43,15 +44,19 @@ function App() {
     // if (questionIdx < filteredBtns.length - 1) {
     if (questionIdx < 20) {
       // Hard-wired to 20 on purpose.
-      setQuestionIdx(shuffledArray[questionIdx + 1]);
-      console.log("IDX: " + questionIdx)
+      // setQuestionIdx(shuffledArray[questionIdx + 1]);
+      setQuestionIdx(questionIdx + 1);
     } else {
-      setQuestionIdx(shuffledArray[0]);
+      // setQuestionIdx(shuffledArray[0]);
+      setQuestionIdx(0);
       // This should kick off final score calculation.
     }
 
     setFlipped(false);
   }
+
+  const currentQuestion = shuffledArray.length > 0 ? filteredBtns[shuffledArray[questionIdx]] : null;
+  
   return (
     <>
       <div className="main-nav">
@@ -76,7 +81,8 @@ function App() {
         <div className="cards-container">
           <FullCard //Child to app.jsx
             questionObject={filteredBtns[questionIdx]} //Sends filteredBtns object to child.
-            handleNextQuestion={nextIndex} // Increments index number to move app to next question.
+            // handleNextQuestion={nextIndex} // Increments index number to move app to next question.
+            handleNextQuestion={currentQuestion} 
             handleFlipped={handleFlipped} // Card flip function.
             flippedState={flipped} // Shows card flipped state.
           />
