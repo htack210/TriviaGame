@@ -116,7 +116,7 @@ const nflTriviaData = [
     A: "Arizona",
     B: "Scottsdale",
     C: "Phoenix",
-    ans: "A.  Arizone",
+    ans: "A.  Arizona",
   },
   {
     id: 14,
