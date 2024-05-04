@@ -63,6 +63,7 @@ function App() {
     }
 
     setFlipped(false);
+    setIsCorrect(true);
   }
 
   const currentQuestion =
