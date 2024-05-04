@@ -66,11 +66,11 @@ const nflTriviaData = [
   {
     id: 8,
     category: "Teams",
-    question: "Which team has won the most Super Bowls?",
+    question: "Which  of these teams has the most Super Bowls?",
     A: "Green Bay Packers",
     B: "Patriots",
-    C: "Pittsburgh Steelers",
-    ans: "C.  Pittsburgh Steelers",
+    C: "Philadelphia Eagles",
+    ans: "B.  Patriots",
   },
   {
     id: 9,

@@ -30,7 +30,7 @@ function App() {
     setFilteredBtns(newFilteredBtns);
     setQuestionIdx(0); // Reset question index when category changes
     setScore(0);
-    console.log("Score reset to " + score);
+    console.log("Score reset to 0!"); // + score);
     setFlipped(false); // Reset flipped state when category changes
 
     // Shuffle the array only when the category changes
@@ -53,9 +53,11 @@ function App() {
   function nextIndex() {
     if (questionIdx < 20) {
       // Hard-wired to 20 on purpose.
+      console.log("question index = " + questionIdx);
       setQuestionIdx(questionIdx + 1);
     } else {
-      setQuestionIdx(0);
+      console.log("Thanks for playing!");
+      // setQuestionIdx(0);
       // This should kick off final score calculation.
     }
 
@@ -73,7 +75,10 @@ function App() {
     <>
       <div className="main-nav">
         <h1>NFL Trivia</h1>
-        <p>Think you know the NFL? Let's find out!</p>
+        <p>
+          Think you know the NFL? Let's find out! <br />
+          How many questions out of 20 can you get right?
+        </p>
       </div>
       <div className="category-nav">
         {categories.map((cat) => {
@@ -88,6 +93,9 @@ function App() {
           );
         })}
       </div>
+      <div className="sub-category-nav">
+        (Changing categories mid-quiz resets your score to 0!)
+      </div>
 
       <div className="content">
         <div className="cards-container">
@@ -97,8 +105,12 @@ function App() {
             handleFlipped={handleFlipped} // Card flip function.
             flippedState={flipped} // Shows card flipped state.
             handleResponse={handleResponse}
+            currentScore={score}
           />
         </div>
+      </div>
+      <div className="footer-nav">
+        <h1>Current Score: {score} out of 20</h1>
       </div>
     </>
   );

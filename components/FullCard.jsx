@@ -5,6 +5,7 @@ export function FullCard({
   handleFlipped,
   flippedState,
   handleResponse,
+  currentScore,
 }) {
   return (
     <div>
@@ -17,8 +18,8 @@ export function FullCard({
                 <b>{questionObject.category}</b>
                 <br />
                 {questionObject.question}
-                <br />
-                Question ID: {questionObject.id}
+                {/* <br />
+                Question ID: {questionObject.id} */}
               </p>
             </div>
           </div>
@@ -63,6 +64,10 @@ export function FullCard({
           C. {questionObject.C}
         </button>
       </div>
+
+      {/* <div className="footer-nav">
+        <h1>Current Score: {currentScore} out of 20</h1>
+      </div> */}
     </div>
   );
 }

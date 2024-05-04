@@ -29,12 +29,38 @@ html, body{
   font-style:italic;
 }
 
+.footer-nav{
+  height: 50px;
+  width: 100%;
+  
+  margin-top: 20px;
+  background-color: #013369;
+  color: white;
+  text-align: center;
+  padding: 5px 10px;
+  z-index: 1000;
+}
+
+.footer-nav h1{
+  margin: 10px 0 0;
+  font-size: 2em;
+}
 .category-nav{
   background-color: #303030;
   width: 100%;
   padding: 4px 10px;
   display: flex;
   justify-content:space-evenly;
+  /* flex-direction:row; */
+}
+
+.sub-category-nav{
+  background-color: #303030;
+  width: 100%;
+  padding: 4px 10px;
+  display: flex;
+  color: whitesmoke;
+  justify-content:center;
   /* flex-direction:row; */
 }
 
