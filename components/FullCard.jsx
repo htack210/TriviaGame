@@ -4,6 +4,7 @@ export function FullCard({
   handleNextQuestion,
   handleFlipped,
   flippedState,
+  handleResponse,
 }) {
   return (
     <div>
@@ -40,13 +41,25 @@ export function FullCard({
         disabled={flippedState}
         onClick={() => handleFlipped()}
       >
-        <button className="responseBtn" disabled={flippedState}>
+        <button
+          className="responseBtn"
+          onClick={() => handleResponse(questionObject.A, questionObject.ans)}
+          disabled={flippedState}
+        >
           A. {questionObject.A}
         </button>
-        <button className="responseBtn" disabled={flippedState}>
+        <button
+          className="responseBtn"
+          onClick={() => handleResponse(questionObject.B, questionObject.ans)}
+          disabled={flippedState}
+        >
           B. {questionObject.B}
         </button>
-        <button className="responseBtn" disabled={flippedState}>
+        <button
+          className="responseBtn"
+          onClick={() => handleResponse(questionObject.C, questionObject.ans)}
+          disabled={flippedState}
+        >
           C. {questionObject.C}
         </button>
       </div>

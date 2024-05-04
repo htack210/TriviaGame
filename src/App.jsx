@@ -5,7 +5,6 @@ import ShuffleArray from "../components/ShuffleArray.jsx";
 import { FullCard } from "../components/FullCard.jsx";
 const categories = ["All", "Teams", "Players & Coaches"];
 const questions = nflTriviaData;
-const responseButtons = document.querySelectorAll(".responseBtn");
 
 function App() {
   const [flipped, setFlipped] = useState(false); //Not flipped at first
@@ -39,6 +38,14 @@ function App() {
   function handleFlipped() {
     setFlipped(!flipped);
     // console.log(flipped);
+  }
+
+  function handleResponse(response, ans) {
+    {
+      ans.includes(response)
+        ? console.log("Correct!")
+        : console.log("Incorrect!");
+    }
   }
 
   function nextIndex() {
@@ -83,6 +90,7 @@ function App() {
             handleNextQuestion={nextIndex} // Increments index number to move app to next question.
             handleFlipped={handleFlipped} // Card flip function.
             flippedState={flipped} // Shows card flipped state.
+            handleResponse={handleResponse}
           />
         </div>
       </div>

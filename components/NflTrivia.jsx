@@ -116,7 +116,7 @@ const nflTriviaData = [
     A: "Arizona",
     B: "Scottsdale",
     C: "Phoenix",
-    ans: "C.  Phoenix",
+    ans: "A.  Arizone",
   },
   {
     id: 14,
@@ -221,16 +221,16 @@ const nflTriviaData = [
   {
     id: 25,
     category: "Teams",
-    question: "In which city are the NFL side the '49ers' based?",
+    question: "Which city do the '49ers' represent?",
     A: "San Francisco",
     B: "Los Angels",
-    C: "Oakland",
+    C: "Santa Clara",
     ans: "A.  San Francisco",
   },
   {
     id: 26,
     category: "Teams",
-    question: "In which city are the NFL side the 'Buccaneers' based?",
+    question: "In which city are the 'Buccaneers' based?",
     A: "Miami",
     B: "Nashville",
     C: "Tampa Bay",
@@ -301,7 +301,7 @@ const nflTriviaData = [
     A: "Greg Jennings",
     B: "Rob Gronkowski",
     C: "Adrian Peterson",
-    ans: "C.  Adria Peterson",
+    ans: "C.  Adrian Peterson",
   },
   {
     id: 34,
