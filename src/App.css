@@ -110,6 +110,10 @@ html, body{
 
 .card-back{
   /* background-color: purple; */
+  background-image: url("../src/assets/checkmark.png");
+  background-position: 50% 95%; /* Center the image */
+  background-repeat: no-repeat;
+  background-size: 20%;
   background-color: rgba(134, 147, 151);
   box-shadow: 0 4px 8px rgba(0,0,0,0.5);
   color: white;
@@ -122,6 +126,26 @@ html, body{
   flex-direction: column;
   margin-bottom: 3px;
 }
+
+.card-back-wrong{
+  /* background-color: purple; */
+  background-image: url("../src/assets/x-mark.png");
+  background-position: 50% 95%; /* Center the image */
+  background-repeat: no-repeat;
+  background-size: 20%;
+  background-color: rgba(134, 147, 151);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+  color: white;
+  border-radius: 10px;
+  padding: 15px;
+  height: 150px;
+  width: 250px;
+  transition: transform 0.3s ease;
+  display:flex;
+  flex-direction: column;
+  margin-bottom: 3px;
+}
+
 .responseBtn{
   background-color: #D50A0A;
   box-shadow: 0 4px 8px rgba(0,0,0,0.5);

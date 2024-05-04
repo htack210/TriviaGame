@@ -5,7 +5,7 @@ export function FullCard({
   handleFlipped,
   flippedState,
   handleResponse,
-  currentScore,
+  isCorrect,
 }) {
   return (
     <div>
@@ -29,8 +29,9 @@ export function FullCard({
       {/* Card back */}
       {flippedState && (
         <>
-          <div className="card-back">
+          <div className={isCorrect ? "card-back" : "card-back-wrong"}>
             <p>{questionObject.ans}</p>
+            {/* {console.log({ isCorrect })} */}
             <button onClick={() => handleNextQuestion()}>
               Click to continue
             </button>

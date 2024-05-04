@@ -281,7 +281,7 @@ const nflTriviaData = [
     question:
       "Which NFL quarterback is known by the nickname 'The Gunslinger'?",
     A: "Brett Favre",
-    B: "Russel Wilson",
+    B: "Russell Wilson",
     C: "Le'Veon Bell",
     ans: "A.  Brett Favre",
   },
@@ -417,7 +417,7 @@ const nflTriviaData = [
     A: "Marcus Welby",
     B: "Christian MCCaffrey",
     C: "Russell Wilson",
-    ans: "C.  Russel Wilson",
+    ans: "C.  Russell Wilson",
   },
   {
     id: 46,

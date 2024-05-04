@@ -8,6 +8,7 @@ const questions = nflTriviaData;
 
 function App() {
   const [flipped, setFlipped] = useState(false); //Not flipped at first
+  const [isCorrect, setIsCorrect] = useState(true);
   const [filteredBtns, setFilteredBtns] = useState(questions);
   const [questionIdx, setQuestionIdx] = useState(0);
   const [shuffledArray, setShuffledArray] = useState([]);
@@ -39,20 +40,20 @@ function App() {
 
   function handleFlipped() {
     setFlipped(!flipped);
-    // console.log(flipped);
   }
 
   function handleResponse(response, ans) {
     if (ans.includes(response)) {
       setScore((prevScore) => prevScore + 1);
+      setIsCorrect(isCorrect);
     } else {
       console.log("Incorrect!");
+      setIsCorrect(!isCorrect);
     }
   }
 
   function nextIndex() {
     if (questionIdx < 20) {
-      // Hard-wired to 20 on purpose.
       console.log("question index = " + questionIdx);
       setQuestionIdx(questionIdx + 1);
     } else {
@@ -105,7 +106,7 @@ function App() {
             handleFlipped={handleFlipped} // Card flip function.
             flippedState={flipped} // Shows card flipped state.
             handleResponse={handleResponse}
-            currentScore={score}
+            isCorrect={isCorrect}
           />
         </div>
       </div>
@@ -117,3 +118,6 @@ function App() {
 }
 
 export default App;
+// Checkmark icon from <a href="https://www.flaticon.com/free-icons/tick" title="tick icons">Tick icons created by kliwir art - Flaticon</a>
+
+//X-Mark icon from <a href="https://www.flaticon.com/free-icons/close" title="close icons">Close icons created by Fathema Khanom - Flaticon</a>
