@@ -11,6 +11,7 @@ function App() {
   const [filteredBtns, setFilteredBtns] = useState(questions);
   const [questionIdx, setQuestionIdx] = useState(0);
   const [shuffledArray, setShuffledArray] = useState([]);
+  const [score, setScore] = useState(0);
 
   useEffect(() => {
     // Initialize with default category "All" when component mounts
@@ -28,7 +29,8 @@ function App() {
     }
     setFilteredBtns(newFilteredBtns);
     setQuestionIdx(0); // Reset question index when category changes
-    console.log("I just reset to 0!");
+    setScore(0);
+    console.log("Score reset to " + score);
     setFlipped(false); // Reset flipped state when category changes
 
     // Shuffle the array only when the category changes
@@ -41,10 +43,10 @@ function App() {
   }
 
   function handleResponse(response, ans) {
-    {
-      ans.includes(response)
-        ? console.log("Correct!")
-        : console.log("Incorrect!");
+    if (ans.includes(response)) {
+      setScore((prevScore) => prevScore + 1);
+    } else {
+      console.log("Incorrect!");
     }
   }
 
@@ -62,6 +64,10 @@ function App() {
 
   const currentQuestion =
     shuffledArray.length > 0 ? filteredBtns[shuffledArray[questionIdx]] : null;
+
+  useEffect(() => {
+    console.log("Correct! Score updated: " + score);
+  }, [score]);
 
   return (
     <>

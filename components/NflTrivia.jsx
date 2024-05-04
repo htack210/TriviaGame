@@ -30,10 +30,10 @@ const nflTriviaData = [
   {
     id: 4,
     category: "Teams",
-    question: "In which city are the NFL side the 'Bengals' based?",
+    question: "In which city are the 'Bengals' based?",
     A: "Indianapolis",
     B: "Phoenix",
-    C: "Cincinnati",
+    C: "Cincinatti",
     ans: "C.  Cincinatti",
   },
   {
@@ -239,7 +239,7 @@ const nflTriviaData = [
   {
     id: 27,
     category: "Teams",
-    question: "In which city are the NFL side the 'Redskins' based?",
+    question: "In which city are the 'Commanders' based?",
     A: "Washington",
     B: "Boston",
     C: "Minneapolis",
