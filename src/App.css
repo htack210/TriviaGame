@@ -10,13 +10,12 @@ html, body{
 
 .main-nav{
   height: 100px;
+  width: 100%;
   top: 0;
-  /* background-color: #4169E1; */
   background-color: #013369;
   color: white;
   text-align: center;
   padding: 5px 10px;
-  width: 100%;
   z-index: 1000;
 }
 
@@ -32,10 +31,11 @@ html, body{
 
 .category-nav{
   background-color: #303030;
-  padding: 4px 0;
+  width: 100%;
+  padding: 4px 10px;
   display: flex;
   justify-content:space-evenly;
-  flex-direction:row;
+  /* flex-direction:row; */
 }
 
 .badge{
@@ -112,12 +112,20 @@ html, body{
   background-color: #95abf3;
 }
 
+.responseBtn[disabled]{
+  background-color: darkgray;
+  cursor: no-drop;
+}
+
+.responseBtn[disabled]:hover{
+  border: none;
+}
+
 .responseBtn-nav{
-  /* background-color: #303030; */
-  /* padding: 4px 0; */
   display: flex;
   justify-content:center;
   flex-direction:column; 
+  cursor: no-drop;
 }
 
 

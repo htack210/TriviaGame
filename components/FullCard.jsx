@@ -35,15 +35,21 @@ export function FullCard({
           </div>
         </>
       )}
-      <div className="responseBtn-nav" onClick={() => handleFlipped()}>
-        <button className="responseBtn">A. {questionObject.A}</button>
-        <button className="responseBtn">B. {questionObject.B}</button>
-        <button className="responseBtn">C. {questionObject.C}</button>
-        {flippedState === true ? (console.log('Flipped')) : (console.log('Not flipped'))}
-        {flippedState === true ? (document.getElementsByClassName('responseBtn').disabled = true) : (document.getElementsByClassName('responseBtn').disabled = false)}
+      <div
+        className="responseBtn-nav"
+        disabled={flippedState}
+        onClick={() => handleFlipped()}
+      >
+        <button className="responseBtn" disabled={flippedState}>
+          A. {questionObject.A}
+        </button>
+        <button className="responseBtn" disabled={flippedState}>
+          B. {questionObject.B}
+        </button>
+        <button className="responseBtn" disabled={flippedState}>
+          C. {questionObject.C}
+        </button>
       </div>
-    
-      {/* {flippedState === true ? (console.log('Flipped')) : (console.log('Not flipped'))} */}
     </div>
   );
 }
