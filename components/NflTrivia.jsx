@@ -465,7 +465,7 @@ const nflTriviaData = [
     A: "Tom Landry",
     B: "Michael Vick",
     C: "Jadeveon Clowney",
-    ans: "C.  Jadeveen Clowney",
+    ans: "C.  Jadeveon Clowney",
   },
   {
     id: 51,
