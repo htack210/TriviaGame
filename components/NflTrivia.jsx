@@ -345,7 +345,7 @@ const nflTriviaData = [
     id: 38,
     category: "Players & Coaches",
     question:
-      "In NFL which Houston Oilers player was nicknamed 'The Human Bowling Ball'?",
+      "Which Houston Oilers player was nicknamed 'The Human Bowling Ball'?",
     A: "Percy Harvin",
     B: "Charlie Tolar",
     C: "Jalen Ramsey",
