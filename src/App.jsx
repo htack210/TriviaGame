@@ -13,6 +13,7 @@ function App() {
   const [questionIdx, setQuestionIdx] = useState(0);
   const [shuffledArray, setShuffledArray] = useState([]);
   const [score, setScore] = useState(0);
+  const [gameOver, setGameOver] = useState(false);
 
   useEffect(() => {
     // Initialize with default category "All" when component mounts
@@ -58,8 +59,7 @@ function App() {
       setQuestionIdx(questionIdx + 1);
     } else {
       console.log("Thanks for playing!");
-      // setQuestionIdx(0);
-      // This should kick off final score calculation.
+      setGameOver(true);
     }
 
     setFlipped(false);
@@ -108,6 +108,7 @@ function App() {
             flippedState={flipped} // Shows card flipped state.
             handleResponse={handleResponse}
             isCorrect={isCorrect}
+            gameOver={gameOver}
           />
         </div>
       </div>

@@ -172,6 +172,17 @@ html, body{
 }
 
 .responseBtn-nav{
+  /* pointer-events:none;
+  opacity: 0.4; */
+  display: flex;
+  justify-content:center;
+  flex-direction:column; 
+  cursor: no-drop;
+}
+
+.responseBtn-nav-disabled{
+  pointer-events:none;
+  opacity: 0.4;
   display: flex;
   justify-content:center;
   flex-direction:column; 

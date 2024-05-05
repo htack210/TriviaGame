@@ -6,13 +6,15 @@ export function FullCard({
   flippedState,
   handleResponse,
   isCorrect,
+  gameOver,
 }) {
   return (
     <div>
       {/* Card Front */}
       {!flippedState && (
         <>
-          <div className="card">
+          <div className="card" disabled={gameOver}>
+            {console.log({ gameOver })}
             <div className="top">
               <p>
                 <b>{questionObject.category}</b>
@@ -31,7 +33,6 @@ export function FullCard({
         <>
           <div className={isCorrect ? "card-back" : "card-back-wrong"}>
             <p>{questionObject.ans}</p>
-            {/* {console.log({ isCorrect })} */}
             <button onClick={() => handleNextQuestion()}>
               Click to continue
             </button>
@@ -39,8 +40,10 @@ export function FullCard({
         </>
       )}
       <div
-        className="responseBtn-nav"
-        disabled={flippedState}
+        className={
+          flippedState ? "responseBtn-nav-disabled" : "responseBtn-nav"
+        }
+        // disabled={flippedState}
         onClick={() => handleFlipped()}
       >
         <button
