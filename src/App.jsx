@@ -53,6 +53,15 @@ function App() {
     }
   }
 
+  function displayToggle() {
+    var x = document.getElementsByClassName("replay");
+    if ({ gameOver }) {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+
   function nextIndex() {
     if (questionIdx < 20) {
       console.log("question index = " + questionIdx);
@@ -114,6 +123,15 @@ function App() {
       </div>
       <div className="footer-nav">
         <h1>Current Score: {score} out of 20</h1>
+      </div>
+      <div className="replay">
+        <button
+          className="replay-button"
+          type="button"
+          onClick={() => window.location.reload()}
+        >
+          Play again?
+        </button>
       </div>
     </>
   );
