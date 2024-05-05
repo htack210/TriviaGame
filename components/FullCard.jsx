@@ -9,11 +9,11 @@ export function FullCard({
   gameOver,
 }) {
   return (
-    <div>
+    <div className="card-all" disabled={gameOver}>
       {/* Card Front */}
       {!flippedState && (
         <>
-          <div className="card" disabled={gameOver}>
+          <div className="card">
             {console.log({ gameOver })}
             <div className="top">
               <p>
@@ -40,38 +40,29 @@ export function FullCard({
         </>
       )}
       <div
-        className={
-          flippedState ? "responseBtn-nav-disabled" : "responseBtn-nav"
-        }
-        // disabled={flippedState}
+        className="responseBtn-nav"
+        disabled={flippedState}
         onClick={() => handleFlipped()}
       >
         <button
           className="responseBtn"
           onClick={() => handleResponse(questionObject.A, questionObject.ans)}
-          disabled={flippedState}
         >
           A. {questionObject.A}
         </button>
         <button
           className="responseBtn"
           onClick={() => handleResponse(questionObject.B, questionObject.ans)}
-          disabled={flippedState}
         >
           B. {questionObject.B}
         </button>
         <button
           className="responseBtn"
           onClick={() => handleResponse(questionObject.C, questionObject.ans)}
-          disabled={flippedState}
         >
           C. {questionObject.C}
         </button>
       </div>
-
-      {/* <div className="footer-nav">
-        <h1>Current Score: {currentScore} out of 20</h1>
-      </div> */}
     </div>
   );
 }

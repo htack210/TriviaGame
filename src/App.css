@@ -108,6 +108,16 @@ html, body{
   margin-bottom: 3px;
 }
 
+.card[disabled]{
+  pointer-events:none;
+  opacity: 0.4; 
+}
+
+.card-all[disabled]{
+  pointer-events:none;
+  opacity: 0.4; 
+}
+
 .card-back{
   /* background-color: purple; */
   background-image: url("../src/assets/checkmark.png");
@@ -162,33 +172,16 @@ html, body{
   background-color: #95abf3;
 }
 
-.responseBtn[disabled]{
-  background-color: darkgray;
-  cursor: no-drop;
-}
-
-.responseBtn[disabled]:hover{
-  border: none;
-}
-
 .responseBtn-nav{
-  /* pointer-events:none;
-  opacity: 0.4; */
   display: flex;
   justify-content:center;
   flex-direction:column; 
-  cursor: no-drop;
 }
 
-.responseBtn-nav-disabled{
+.responseBtn-nav[disabled]{
   pointer-events:none;
   opacity: 0.4;
-  display: flex;
-  justify-content:center;
-  flex-direction:column; 
-  cursor: no-drop;
 }
-
 
 .top{
   display: flex;
