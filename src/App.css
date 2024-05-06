@@ -1,3 +1,12 @@
+:root {
+  --nfl-blue: #013369; 
+  --nfl-red: #D50A0A; 
+  --nfl-silver: rgba(0,0,0,0.5);
+  --bkgcolor: #303030;
+  --forecolor: white; 
+  --hovercolor: #6A9AE2;
+}
+
 html, body{
   margin: 0;
   padding: 0;
@@ -12,8 +21,8 @@ html, body{
   height: 100px;
   width: 100%;
   top: 0;
-  background-color: #013369;
-  color: white;
+  background-color: var(--nfl-blue);
+  color: var(--forecolor);
   text-align: center;
   padding: 5px 10px;
   z-index: 1000;
@@ -35,8 +44,8 @@ html, body{
   width: 100%;
   margin-top: 5px;
   margin-bottom: 10px;
-  background-color: #013369;
-  color: white;
+  background-color: var(--nfl-blue);
+  color: var(--forecolor);
   text-align: center;
   padding: 5px 10px;
   z-index: 1000;
@@ -47,7 +56,7 @@ html, body{
   font-size: 2em;
 }
 .category-nav{
-  background-color: #303030;
+  background-color: var(--bkgcolor);
   width: 100%;
   padding: 4px 10px;
   display: flex;
@@ -61,16 +70,16 @@ html, body{
   
   margin-top: 20px;
   /* background-color: #013369; */
-  color: white;
+  color: var(--forecolor);
   text-align: center;
   padding: 5px 10px;
   z-index: 1000;
 }
 
 .replay-button{
-  background-color: #D50A0A;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-  color: white;
+  background-color: var(--nfl-red);
+  box-shadow: 0 4px 8px var(--nfl-silver);
+  color: var(--forecolor);
   font-weight: bold;
   font-size: large;
   border-radius: 10px;
@@ -82,7 +91,7 @@ html, body{
 }
 
 .category-nav{
-  background-color: #303030;
+  background-color: var(--bkgcolor);
   width: 100%;
   padding: 4px 10px;
   display: flex;
@@ -91,11 +100,11 @@ html, body{
 }
 
 .sub-category-nav{
-  background-color: #303030;
+  background-color: var(--bkgcolor);
   width: 100%;
   padding: 4px 10px;
   display: flex;
-  color: whitesmoke;
+  color: var(--forecolor);
   justify-content:center;
   /* flex-direction:row; */
 }
@@ -105,15 +114,15 @@ html, body{
   padding: 5px 15px;
   margin: 0 5px;
   border-radius: 50px;
-  background-color: #6A9AE2;
-  color: white;
+  background-color: var(--hovercolor);
+  color: var(--forecolor);
   border: none;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .badge:hover{
-  background-color: #95abf3;
+  background-color:var(--hovercolor);
 }
 
 .content{
@@ -131,9 +140,9 @@ html, body{
 
 .card{
   /* background-color: #4169E1; */
-  background-color: #013369;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-  color: white;
+  background-color: var(--nfl-blue);
+  box-shadow: 0 4px 8px var(--nfl-silver);
+  color: var(--forecolor);
   border-radius: 10px;
   padding: 15px;
   height: 150px;
@@ -161,8 +170,8 @@ html, body{
   background-repeat: no-repeat;
   background-size: 20%;
   background-color: rgba(134, 147, 151);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-  color: white;
+  box-shadow: 0 4px 8px var(--nfl-silver);
+  color: var(--forecolor);
   border-radius: 10px;
   padding: 15px;
   height: 150px;
@@ -180,8 +189,8 @@ html, body{
   background-repeat: no-repeat;
   background-size: 20%;
   background-color: rgba(134, 147, 151);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-  color: white;
+  box-shadow: 0 4px 8px var(--nfl-silver);
+  color: var(--forecolor);
   border-radius: 10px;
   padding: 15px;
   height: 150px;
@@ -193,9 +202,9 @@ html, body{
 }
 
 .responseBtn{
-  background-color: #D50A0A;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-  color: white;
+  background-color: var(--nfl-red);
+  box-shadow: 0 4px 8px var(--nfl-silver);
+  color: var(--forecolor);
   border-radius: 10px;
   padding: 15px;
   height: 50px;
@@ -203,11 +212,15 @@ html, body{
   transition: transform 0.3s ease;
   margin-top: 10px;
 }
-
+.directionContainer{
+  display:inline-block;
+  padding: 2px 30px;
+  /* display: flex; */
+}
 .directionButtons{
-  background-color: #D50A0A;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-  color: white;
+  background-color: var(--nfl-red);
+  box-shadow: 0 4px 8px var(--nfl-silver);
+  color: var(--forecolor);
   border-radius: 10px;
   padding: 5px;
   height: 30px;
@@ -215,8 +228,7 @@ html, body{
   transition: transform 0.3s ease;
   margin-top: 5px;
   text-align: center;
-  display:inline-block;
-  /* margin-right: 5px; */
+  margin-right: 5px;
 }
 
 .directionButtons:hover{
@@ -253,11 +265,11 @@ html, body{
 }
 
 .categoryButton{
-  color:white;
+  color:var(--forecolor);
   font-weight: bold;
   padding: 10px;
   margin-right: 5px;
-  background-color: #D50A0A;
+  background-color: var(--nfl-red);
   width:120px;
 }
 

@@ -33,13 +33,15 @@ export function FullCard({
         <>
           <div className={isCorrect ? "card-back" : "card-back-wrong"}>
             <p>{questionObject.ans}</p>
-            <button
-              className="directionButtons"
-              onClick={() => handleNextQuestion()}
-            >
-              Forward
-            </button>
-            <button className="directionButtons">Back</button>
+            <div className="directionContainer">
+              <button className="directionButtons">Back</button>
+              <button
+                className="directionButtons"
+                onClick={() => handleNextQuestion()}
+              >
+                Forward
+              </button>
+            </div>
           </div>
         </>
       )}
