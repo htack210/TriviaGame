@@ -113,7 +113,7 @@ function App() {
         </div>
       </div>
       <div className="footer-nav">
-        <h1>Current Number Correct: {score} out of 20</h1>
+        <h1>Number Correct: {score} out of 20</h1>
       </div>
 
       {gameOver && (
