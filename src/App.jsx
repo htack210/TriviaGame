@@ -14,6 +14,7 @@ function App() {
   const [shuffledArray, setShuffledArray] = useState([]);
   const [score, setScore] = useState(0);
   const [gameOver, setGameOver] = useState(false);
+  // const [isForward, setIsForward] = useState(true);
 
   useEffect(() => {
     // Initialize with default category "All" when component mounts
@@ -53,7 +54,7 @@ function App() {
     }
   }
 
-  function nextIndex() {
+  function nextIndex(isForward) {
     if (questionIdx < 19) {
       console.log("question index = " + questionIdx);
       setQuestionIdx(questionIdx + 1);
@@ -64,6 +65,7 @@ function App() {
 
     setFlipped(false);
     setIsCorrect(true);
+    setIsForward(true);
   }
 
   const currentQuestion =

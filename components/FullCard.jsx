@@ -37,7 +37,7 @@ export function FullCard({
               <button className="directionButtons">Back</button>
               <button
                 className="directionButtons"
-                onClick={() => handleNextQuestion()}
+                onClick={() => handleNextQuestion(true)}
               >
                 Forward
               </button>
