@@ -30,10 +30,10 @@ html, body{
 }
 
 .footer-nav{
-  height: 50px;
+  height: 80px;
   width: 100%;
-  
-  margin-top: 20px;
+  margin-top: 5px;
+  margin-bottom: 10px;
   background-color: #013369;
   color: white;
   text-align: center;
