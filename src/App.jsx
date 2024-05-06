@@ -114,7 +114,7 @@ function App() {
       </div>
       <div className="footer-nav">
         <h1>Question #: {questionIdx + 1}</h1>
-        <h2>Number Correct: {score} out of 20</h2>
+        <h2>{score} out of 20 = {(score/20) * 100}%</h2>
       </div>
 
       {gameOver && (
