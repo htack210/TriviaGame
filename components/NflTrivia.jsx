@@ -339,7 +339,7 @@ const nflTriviaData = [
     A: "Lenny Moore",
     B: "Greg Jennings",
     C: "Rob Riggle",
-    ans: "A.  Lenny Moore",
+    ans: "B.  Greg Jennings",
   },
   {
     id: 38,
@@ -540,7 +540,7 @@ const nflTriviaData = [
     A: "Jalen Hurts",
     B: "Orlando Pace",
     C: "Earl Thomas",
-    ans: "B.  Orlando Price",
+    ans: "B.  Orlando Pace",
   },
   {
     id: 59,
