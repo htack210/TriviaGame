@@ -69,6 +69,7 @@ function App() {
       } else {
         console.log("Thanks for playing!");
         setGameOver(true);
+        () => on();
       }
     } else {
       if (questionIdx >= 0 && questionIdx < 19) {
@@ -150,12 +151,13 @@ function App() {
 
       {gameOver && (
         <div id="overlay" className="replay">
+          <h1>Thanks for playing!</h1>
           <button
             className="replay-button"
             type="button"
             onClick={() => window.location.reload()}
           >
-            Play again?
+            Click to reset
           </button>
         </div>
       )}
