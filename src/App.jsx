@@ -145,16 +145,20 @@ function App() {
       </div>
       <div className="footer-nav">
         <h1>Question #: {questionIdx + 1}</h1>
-        <p>
+        {/* <p>
           {score} correct out of 20
           <br />
           <b>Score: {Math.trunc((score / 20) * 100)}%</b>
-        </p>
+        </p> */}
         {/* <h2>Score: {(score/20) * 100}%</h2> */}
       </div>
-      <div id="overlay" onClick={() => off()}>
+      <div id="overlay">
         <h1>Thanks for playing!</h1>
-        <h2>Click to reset</h2>
+        <p>{score} correct out of 20</p>
+        <h2>Final Score: {Math.trunc((score / 20) * 100)}%</h2>
+        <button className="replay-button" onClick={() => off()}>
+          Click to reset
+        </button>
       </div>
     </>
   );
