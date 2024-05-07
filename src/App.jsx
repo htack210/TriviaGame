@@ -53,6 +53,14 @@ function App() {
     }
   }
 
+  function on() {
+    document.getElementById("overlay").style.display = "block";
+  }
+  
+  function off() {
+    document.getElementById("overlay").style.display = "none";
+  }
+
   function nextIndex(isForward) {
     if (isForward) {
       if (questionIdx < 19) {
@@ -107,7 +115,7 @@ function App() {
       </div>
 
       <div className="content">
-        {gameOver && (
+        {/* {gameOver && (
           <div className="replay">
             <button
               className="replay-button"
@@ -117,7 +125,7 @@ function App() {
               Play again?
             </button>
           </div>
-        )}
+        )} */}
         <div className="cards-container">
           <FullCard //Child to app.jsx
             questionObject={currentQuestion || filteredBtns[questionIdx]} //Sends filteredBtns object to child.
@@ -140,8 +148,8 @@ function App() {
         {/* <h2>Score: {(score/20) * 100}%</h2> */}
       </div>
 
-      {/* {gameOver && (
-        <div className="replay">
+      {gameOver && (
+        <div id="overlay" className="replay">
           <button
             className="replay-button"
             type="button"
@@ -150,7 +158,7 @@ function App() {
             Play again?
           </button>
         </div>
-      )} */}
+      )}
     </>
   );
 }
