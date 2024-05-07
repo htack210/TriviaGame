@@ -5,7 +5,7 @@ const nflTriviaData = [
     question:
       "Who was picked first overall by the St. Louis Rams in the 2010 NFL Draft?",
     A: "Sam Bradford",
-    B: "Mat Stafford",
+    B: "Matt Stafford",
     C: "Jimmy Garoppolo",
     ans: "A.  Sam Bradford",
   },
@@ -359,7 +359,7 @@ const nflTriviaData = [
     A: "Michael Vick",
     B: "Anquan Boldin",
     C: "Ben Roethlisberger",
-    ans: "C.  Ben Roethlisberger",
+    ans: "B.  Anquan Boldin",
   },
   {
     id: 40,

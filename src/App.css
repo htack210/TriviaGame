@@ -231,6 +231,10 @@ html, body{
   margin-right: 5px;
 }
 
+.directionButtons[disabled]{
+  pointer-events:none;
+  opacity: 0.4;
+}
 .directionButtons:hover{
   background-color: #95abf3;
 }
