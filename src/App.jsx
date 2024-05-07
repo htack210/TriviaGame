@@ -107,6 +107,17 @@ function App() {
       </div>
 
       <div className="content">
+        {gameOver && (
+          <div className="replay">
+            <button
+              className="replay-button"
+              type="button"
+              onClick={() => window.location.reload()}
+            >
+              Play again?
+            </button>
+          </div>
+        )}
         <div className="cards-container">
           <FullCard //Child to app.jsx
             questionObject={currentQuestion || filteredBtns[questionIdx]} //Sends filteredBtns object to child.
@@ -129,7 +140,7 @@ function App() {
         {/* <h2>Score: {(score/20) * 100}%</h2> */}
       </div>
 
-      {gameOver && (
+      {/* {gameOver && (
         <div className="replay">
           <button
             className="replay-button"
@@ -139,7 +150,7 @@ function App() {
             Play again?
           </button>
         </div>
-      )}
+      )} */}
     </>
   );
 }

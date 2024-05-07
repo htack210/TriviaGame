@@ -1,23 +1,24 @@
 :root {
-  --nfl-blue: #013369; 
-  --nfl-red: #D50A0A; 
-  --nfl-silver: rgba(0,0,0,0.5);
+  --nfl-blue: #013369;
+  --nfl-red: #d50a0a;
+  --nfl-silver: rgba(0, 0, 0, 0.5);
   --bkgcolor: #303030;
-  --forecolor: white; 
-  --hovercolor: #6A9AE2;
+  --forecolor: white;
+  --hovercolor: #6a9ae2;
 }
 
-html, body{
+html,
+body {
   margin: 0;
   padding: 0;
   width: 100%;
-  font-family: 'Roboto',sans-serif;
+  font-family: "Roboto", sans-serif;
   height: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.main-nav{
+.main-nav {
   height: 100px;
   width: 100%;
   top: 0;
@@ -28,17 +29,17 @@ html, body{
   z-index: 1000;
 }
 
-.main-nav h1{
+.main-nav h1 {
   margin: 10px 0 0;
   font-size: 2em;
 }
 
-.main-nav p{
+.main-nav p {
   margin: 0 0 10px;
-  font-style:italic;
+  font-style: italic;
 }
 
-.footer-nav{
+.footer-nav {
   height: 80px;
   height: 109px;
   width: 100%;
@@ -51,23 +52,23 @@ html, body{
   z-index: 1000;
 }
 
-.footer-nav h1{
+.footer-nav h1 {
   margin: 10px 0 0;
   font-size: 2em;
 }
-.category-nav{
+.category-nav {
   background-color: var(--bkgcolor);
   width: 100%;
   padding: 4px 10px;
   display: flex;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
   /* flex-direction:row; */
 }
 
-.replay{
+.replay {
   height: 50px;
   width: 100%;
-  
+  top: 50%;
   margin-top: 20px;
   /* background-color: #013369; */
   color: var(--forecolor);
@@ -76,7 +77,7 @@ html, body{
   z-index: 1000;
 }
 
-.replay-button{
+.replay-button {
   background-color: var(--nfl-red);
   box-shadow: 0 4px 8px var(--nfl-silver);
   color: var(--forecolor);
@@ -90,26 +91,26 @@ html, body{
   margin-top: 10px;
 }
 
-.category-nav{
+.category-nav {
   background-color: var(--bkgcolor);
   width: 100%;
   padding: 4px 10px;
   display: flex;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
   /* flex-direction:row; */
 }
 
-.sub-category-nav{
+.sub-category-nav {
   background-color: var(--bkgcolor);
   width: 100%;
   padding: 4px 10px;
   display: flex;
   color: var(--forecolor);
-  justify-content:center;
+  justify-content: center;
   /* flex-direction:row; */
 }
 
-.badge{
+.badge {
   display: inline-block;
   padding: 5px 15px;
   margin: 0 5px;
@@ -121,15 +122,15 @@ html, body{
   transition: background-color 0.3s;
 }
 
-.badge:hover{
-  background-color:var(--hovercolor);
+.badge:hover {
+  background-color: var(--hovercolor);
 }
 
-.content{
+.content {
   padding-top: 20px;
 }
 
-.cards-container{
+.cards-container {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -138,7 +139,7 @@ html, body{
   justify-content: center;
 }
 
-.card{
+.card {
   /* background-color: #4169E1; */
   background-color: var(--nfl-blue);
   box-shadow: 0 4px 8px var(--nfl-silver);
@@ -148,22 +149,22 @@ html, body{
   height: 150px;
   width: 250px;
   transition: transform 0.3s ease;
-  display:flex;
+  display: flex;
   flex-direction: column;
   margin-bottom: 3px;
 }
 
-.card[disabled]{
-  pointer-events:none;
-  opacity: 0.4; 
+.card[disabled] {
+  pointer-events: none;
+  opacity: 0.4;
 }
 
-.card-all[disabled]{
-  pointer-events:none;
-  opacity: 0.4; 
+.card-all[disabled] {
+  pointer-events: none;
+  opacity: 0.4;
 }
 
-.card-back{
+.card-back {
   /* background-color: purple; */
   background-image: url("../src/assets/checkmark.png");
   background-position: 50% 95%; /* Center the image */
@@ -177,12 +178,12 @@ html, body{
   height: 150px;
   width: 250px;
   transition: transform 0.3s ease;
-  display:flex;
+  display: flex;
   flex-direction: column;
   margin-bottom: 3px;
 }
 
-.card-back-wrong{
+.card-back-wrong {
   /* background-color: purple; */
   background-image: url("../src/assets/x-mark.png");
   background-position: 50% 95%; /* Center the image */
@@ -196,12 +197,12 @@ html, body{
   height: 150px;
   width: 250px;
   transition: transform 0.3s ease;
-  display:flex;
+  display: flex;
   flex-direction: column;
   margin-bottom: 3px;
 }
 
-.responseBtn{
+.responseBtn {
   background-color: var(--nfl-red);
   box-shadow: 0 4px 8px var(--nfl-silver);
   color: var(--forecolor);
@@ -212,12 +213,12 @@ html, body{
   transition: transform 0.3s ease;
   margin-top: 10px;
 }
-.directionContainer{
-  display:inline-block;
+.directionContainer {
+  display: inline-block;
   padding: 2px 30px;
   /* display: flex; */
 }
-.directionButtons{
+.directionButtons {
   background-color: var(--nfl-red);
   box-shadow: 0 4px 8px var(--nfl-silver);
   color: var(--forecolor);
@@ -231,57 +232,57 @@ html, body{
   margin-right: 5px;
 }
 
-.directionButtons[disabled]{
-  pointer-events:none;
+.directionButtons[disabled] {
+  pointer-events: none;
   opacity: 0.4;
 }
-.directionButtons:hover{
+.directionButtons:hover {
   background-color: #95abf3;
 }
 
-.responseBtn:hover{
+.responseBtn:hover {
   background-color: #95abf3;
 }
 
-.responseBtn-nav{
+.responseBtn-nav {
   display: flex;
-  justify-content:center;
-  flex-direction:column; 
+  justify-content: center;
+  flex-direction: column;
 }
 
-.responseBtn-nav[disabled]{
-  pointer-events:none;
+.responseBtn-nav[disabled] {
+  pointer-events: none;
   opacity: 0.4;
 }
 
-.top{
+.top {
   display: flex;
   flex-direction: row;
 }
-.card:hover{
+.card:hover {
   background-color: #95abf3;
   cursor: pointer;
 }
 
-.categoryButton:hover{
-  transform: scale(1.10);
-  background-color: #6A9AE2;
+.categoryButton:hover {
+  transform: scale(1.1);
+  background-color: #6a9ae2;
 }
 
-.categoryButton{
-  color:var(--forecolor);
+.categoryButton {
+  color: var(--forecolor);
   font-weight: bold;
   padding: 10px;
   margin-right: 5px;
   background-color: var(--nfl-red);
-  width:120px;
+  width: 120px;
 }
 
-@media (max-wdith: 600x){
+@media (max-wdith: 600x) {
   .card-container {
     grid-template-columns: 1fr;
   }
-  .buttonContainer{
+  .buttonContainer {
     grid-template-columns: 1fr;
   }
 }
