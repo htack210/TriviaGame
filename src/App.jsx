@@ -15,6 +15,15 @@ function App() {
   const [score, setScore] = useState(0);
   const [gameOver, setGameOver] = useState(false);
 
+  function on() {
+    document.getElementById("overlay").style.display = "block";
+  }
+
+  function off() {
+    document.getElementById("overlay").style.display = "none";
+    window.location.reload();
+  }
+
   useEffect(() => {
     // Initialize with default category "All" when component mounts
     handleClick("All");
@@ -53,14 +62,6 @@ function App() {
     }
   }
 
-  function on() {
-    document.getElementById("overlay").style.display = "block";
-  }
-  
-  function off() {
-    document.getElementById("overlay").style.display = "none";
-  }
-
   function nextIndex(isForward) {
     if (isForward) {
       if (questionIdx < 19) {
@@ -69,7 +70,9 @@ function App() {
       } else {
         console.log("Thanks for playing!");
         setGameOver(true);
-        () => on();
+        {
+          on();
+        }
       }
     } else {
       if (questionIdx >= 0 && questionIdx < 19) {
@@ -117,13 +120,14 @@ function App() {
 
       <div className="content">
         {/* {gameOver && (
-          <div className="replay">
+          <div id="overlay" className="replay" onClick={() => off()}>
+            <h1>Thanks for playing!</h1>
             <button
               className="replay-button"
               type="button"
               onClick={() => window.location.reload()}
             >
-              Play again?
+              Click to reset
             </button>
           </div>
         )} */}
@@ -148,19 +152,10 @@ function App() {
         </p>
         {/* <h2>Score: {(score/20) * 100}%</h2> */}
       </div>
-
-      {gameOver && (
-        <div id="overlay" className="replay">
-          <h1>Thanks for playing!</h1>
-          <button
-            className="replay-button"
-            type="button"
-            onClick={() => window.location.reload()}
-          >
-            Click to reset
-          </button>
-        </div>
-      )}
+      <div id="overlay" onClick={() => off()}>
+        <h1>Thanks for playing!</h1>
+        <h2>Click to reset</h2>
+      </div>
     </>
   );
 }
