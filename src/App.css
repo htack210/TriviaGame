@@ -5,6 +5,7 @@
   --bkgcolor: #303030;
   --forecolor: white;
   --hovercolor: #6a9ae2;
+  --containercolor: whitesmoke;
 }
 
 html,
@@ -144,8 +145,7 @@ body {
 
 .content {
   width: 105%;
-  /* padding-top: 20px; */
-  background-color: whitesmoke;
+  background-color:var(--containercolor);
 }
 
 .cards-container {
