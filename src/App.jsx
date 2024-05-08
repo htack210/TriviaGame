@@ -119,18 +119,6 @@ function App() {
       </div>
 
       <div className="content">
-        {/* {gameOver && (
-          <div id="overlay" className="replay" onClick={() => off()}>
-            <h1>Thanks for playing!</h1>
-            <button
-              className="replay-button"
-              type="button"
-              onClick={() => window.location.reload()}
-            >
-              Click to reset
-            </button>
-          </div>
-        )} */}
         <div className="cards-container">
           <FullCard //Child to app.jsx
             questionObject={currentQuestion || filteredBtns[questionIdx]} //Sends filteredBtns object to child.
@@ -145,12 +133,6 @@ function App() {
       </div>
       <div className="footer-nav">
         <h1>Question #: {questionIdx + 1}</h1>
-        {/* <p>
-          {score} correct out of 20
-          <br />
-          <b>Score: {Math.trunc((score / 20) * 100)}%</b>
-        </p> */}
-        {/* <h2>Score: {(score/20) * 100}%</h2> */}
       </div>
       <div id="overlay">
         <h1>Thanks for playing!</h1>
